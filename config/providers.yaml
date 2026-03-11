@@ -1,0 +1,40 @@
+eurostat:
+  hicp_yoy:
+    dataset: prc_hicp_manr
+    params:
+      unit: RCH_A        # Annual rate of change
+      coicop: CP00       # All items
+    geographies:
+      eurozone: EA
+      germany: DE
+      france: FR
+      italy: IT
+      netherlands: NL
+
+  debt_gdp:
+    dataset: gov_10dd_edpt1
+    params:
+      unit: PC_GDP
+      sector: S13        # General government
+      na_item: GD
+
+ecb_sdw:
+  yield_curve:
+    flow_ref: YC
+    key: B.U2.EUR.4F.G_N_A.SV_C_YM
+    # Append tenor: .SR_10Y, .SR_2Y, etc.
+
+fred:
+  base_url: https://api.stlouisfed.org/fred/series/observations
+  series:
+    us_cpi_yoy: CPIAUCSL      # Use units=pc1 for YoY
+    us_pce_yoy: PCEPI
+    japan_cpi: JPNCPIALLMINMEI  # Use units=pc1 for YoY
+
+imf:
+  base_url: https://www.imf.org/external/datamapper/api/v1/
+  indicators:
+    cpi_pct_change: PCPIPCH   # CPI inflation, average consumer prices, % change
+  countries:
+    japan: JPN
+    usa: USA

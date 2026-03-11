@@ -1,0 +1,55 @@
+# config/output_config.yaml
+# Controls how all query outputs are rendered.
+
+output:
+  rich_report: true          # Combine reasoning chain + table + chart in one HTML page
+  open_browser: true         # Auto-open output.html after every query
+  out_file: output.html      # Output filename (relative to project root)
+  key_reads_in_html: true    # Render key analyst reads inside the HTML report (not just chat)
+
+chart:
+  library: plotly            # plotly | matplotlib
+  height_px: 480
+  default_years: 5           # Default time horizon for macro time series
+  colors:
+    primary:    "#003399"    # PGGM blue — used for main series
+    comparator1: "#CC0001"   # Red — US / Italy
+    comparator2: "#FF6600"   # Orange — Japan / France
+    comparator3: "#2CA02C"   # Green — third comparator
+    neutral:    "#6B7280"    # Grey — reference lines, zero lines
+    1m_ago:     "#F5A623"    # Amber — 1 month ago line
+    1y_ago:     "#AAAAAA"    # Grey  — 1 year ago line
+
+table:
+  bold_primary: true         # Bold the primary geography row
+  show_change_arrows: true   # Show ▲/▼ coloured arrows for changes
+
+reasoning_chain:
+  show: true                 # Display reasoning chain at top of report
+  show_tweak_hints: true     # Show config tweak hints below reasoning chain
+
+# ── Intent-specific overrides ──────────────────────────────────────────────
+rates_curve:
+  default_years: 10          # Time horizon for time-series chart
+  snapshot_tenors:           # Tenors shown in curve snapshot chart
+    - SR_3M
+    - SR_6M
+    - SR_1Y
+    - SR_2Y
+    - SR_3Y
+    - SR_5Y
+    - SR_7Y
+    - SR_10Y
+    - SR_20Y
+    - SR_30Y
+  timeseries_default_tenor: SR_10Y   # Default tenor shown in chart 2
+  comparator_countries:              # Countries shown in chart 3 (ECB SDW country codes)
+    - label: "Germany (Bund)"
+      country: DE
+      color: "#003399"
+    - label: "France (OAT)"
+      country: FR
+      color: "#CC0001"
+    - label: "Italy (BTP)"
+      country: IT
+      color: "#FF6600"

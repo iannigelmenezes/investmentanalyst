@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+
+# Secrets
+.env
+corporate_ca.pem
+
+# Output (regenerated on each run)
+output.html
+
+# Editor
+.vscode/
