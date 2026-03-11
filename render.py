@@ -22,6 +22,7 @@ _TEXT       = "#1A1A2E"
 _SUBTLE     = "#6B7280"
 
 
+
 def _arrow(val, unit="pp", positive_good=False):
     """Return an HTML-coloured arrow + value string."""
     if val is None:

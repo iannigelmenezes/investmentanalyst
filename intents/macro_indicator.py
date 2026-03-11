@@ -14,7 +14,6 @@ import sys
 import os
 import pandas as pd
 import plotly.graph_objects as go
-import webbrowser
 
 # Make sure project root is importable
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
@@ -257,6 +256,7 @@ def run(params: dict = None):
     )
 
     print(f"\n📊 Report saved → {saved}")
+    import webbrowser
     webbrowser.open(f"file:///{saved.replace(os.sep, '/')}")
 
     print(f"\n✅ Source: Eurostat (prc_hicp_manr)")

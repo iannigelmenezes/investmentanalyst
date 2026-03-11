@@ -420,8 +420,8 @@ def run(params: dict = None):
     )
 
     print(f"\n📊 Report saved → {saved}")
+    import webbrowser
     webbrowser.open(f"file:///{saved.replace(os.sep, '/')}")
-
     print(f"\n✅ Source: ECB SDW")
     print(f"📅 Vintage: {today_str}")
     print(f"📊 Chart: output.html (opened automatically)")

@@ -11,6 +11,33 @@ eurostat:
       italy: IT
       netherlands: NL
 
+  hicp_components:
+    dataset: prc_hicp_manr
+    params:
+      unit: RCH_A        # Annual rate of change
+    components:
+      All items:                   CP00
+      Food & non-alcoholic bev.:   CP011+CP012
+      Alcohol & tobacco:           CP021+CP022
+      Clothing & footwear:         CP03
+      Housing & utilities:         CP04
+      Household furnishings:       CP05
+      Health:                      CP06
+      Transport:                   CP07
+      Communication:               CP08
+      Recreation & culture:        CP09
+      Education:                   CP10
+      Restaurants & hotels:        CP11
+      Miscellaneous:               CP12
+    # Analytical groupings for the breakdown chart (COICOP special aggregates)
+    analytical_groups:
+      All items:                   CP00
+      Services:                    SERV
+      Non-energy industrial goods: IGX_E
+      Food (incl. alcohol & tab.): TOT_X_NRG_SERV    # proxy; see note
+      Energy:                      NRG
+      Core (ex. energy & food):    OVERALL_XEFAT0
+
   debt_gdp:
     dataset: gov_10dd_edpt1
     params:
