@@ -1,3 +1,8 @@
+> **This file has been split into SPEC_CORE.md and SPEC_PROVIDERS.md and is kept for reference only.**
+> Load SPEC_CORE.md every session. Load SPEC_PROVIDERS.md on demand for provider/API work.
+
+---
+
 # Investment Analyst Copilot — System Spec
 
 > Place this file in your VS Code workspace root as `INVESTMENT_ANALYST_SPEC.md`.

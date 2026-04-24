@@ -11,14 +11,17 @@ INTENT_KEYWORDS = {
                         "growth", "pmi", "current account", "trade balance"],
     "CROSS_SECTION":   ["all eu", "all member states", "eu countries", "compare",
                         "ranking", "ranked", "across countries", "debt-to-gdp"],
-    "ISSUANCE":        ["issuance", "issue", "supply", "dmo", "auction",
+    "ISSUANCE":        ["issuance", "issue", "dmo", "auction",
                         "gross issuance", "net issuance", "borrow"],
     "FLOW_MAP":        ["sankey", "flows", "pipeline", "oil flows", "gas flows",
-                        "lng", "barrels", "mtoe", "bcm", "energy flows"],
+                        "lng", "barrels", "mtoe", "bcm", "energy flows",
+                        "oil supply", "oil demand", "global oil", "crude oil"],
     "RATES_CURVE":     ["curve", "yields", "yield curve", "term structure",
                         "bund curve", "oat curve", "inversion"],
     "RELATIVE_VALUE":  ["spread", "vs", "versus", "relative to", "differential",
                         "btp-bund", "oat-bund", "basis"],
+    "ECB_HAWKOMETER":  ["ecb speaker", "ecb dashboard", "hawkometer", "ecb speakers",
+                        "hawkishness", "ecb policy monitor", "show me the ecb"],
 }
 
 HANDLER_MAP = {
@@ -28,6 +31,7 @@ HANDLER_MAP = {
     "FLOW_MAP":        "intents.flow_map",
     "RATES_CURVE":     "intents.rates_curve",
     "RELATIVE_VALUE":  "intents.relative_value",
+    "ECB_HAWKOMETER":  "intents.ecb_hawkometer",
 }
 
 GEOGRAPHY_ALIASES = {
@@ -107,6 +111,7 @@ def dispatch(query: str):
         "FLOW_MAP":        "IEA / Eurostat energy datasets",
         "RATES_CURVE":     "ECB Statistical Data Warehouse (SDW)",
         "RELATIVE_VALUE":  "ECB SDW + FRED",
+        "ECB_HAWKOMETER":  "ECB speeches (ecb.europa.eu) + Claude inference",
     }
     geo_detected  = params.get("geography", "EA (default)")
     metric_detect = params.get("metric", "hicp (default)")

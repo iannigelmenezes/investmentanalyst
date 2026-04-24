@@ -1,0 +1,6 @@
+requests
+beautifulsoup4
+sentence-transformers
+numpy
+python-dateutil
+lxml

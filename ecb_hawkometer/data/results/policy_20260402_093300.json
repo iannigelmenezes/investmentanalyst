@@ -1,0 +1,51 @@
+{
+  "prediction": "cut",
+  "confidence": "medium",
+  "next_meeting_date": "2026-04-17",
+  "weighted_score": 4.29,
+  "rationale": "The weighted average hawkishness score of 4.29 (below the 4-6 hold range midpoint and approaching the <4 cut threshold) points toward a further cut at the April 17 meeting. Lagarde's speeches explicitly flag scenario-based caution given the Iran-driven energy shock, but she does not pre-commit to a pause. Schnabel remains the most hawkish voice (6.2), but her weight is 0.8 and she is a single dissenting signal. Lane (4.2) and de Guindos (4.5) are both near-neutral. Cipollone and Elderson are effectively off-mandate in their recent communications, reducing informational content and diluting the hawkish signal from Schnabel. The macro backdrop — ECB staff projections showing inflation at 1.9% and solid growth — would normally support a cut continuation, but the energy shock uncertainty argues for a more cautious pace. Medium confidence: a 25bps cut is the base case, but a hold cannot be ruled out if oil prices remain elevated by April.",
+  "rubric": [
+    {
+      "factor": "Christine Lagarde (President)",
+      "direction": "neutral-dovish",
+      "weight_applied": 1.0,
+      "evidence": "Scenario-based framing; flagged energy shock risk but did not pre-commit to hold. Prior trajectory was toward further cuts."
+    },
+    {
+      "factor": "Philip R. Lane (Chief Economist)",
+      "direction": "neutral",
+      "weight_applied": 1.0,
+      "evidence": "No rate signalling in readable speeches. Structural/academic tone. Characteristic slight dovish lean as Chief Economist."
+    },
+    {
+      "factor": "Isabel Schnabel (Executive Board)",
+      "direction": "hawkish",
+      "weight_applied": 0.8,
+      "evidence": "Explicitly argued for price stability primacy and against growth-driven easing. Most hawkish readable signal in the window."
+    },
+    {
+      "factor": "Luis de Guindos (Vice-President)",
+      "direction": "neutral",
+      "weight_applied": 0.8,
+      "evidence": "Acknowledged benign inflation backdrop and acknowledged geopolitical uncertainty, but no rate direction."
+    },
+    {
+      "factor": "Piero Cipollone (Executive Board)",
+      "direction": "off-mandate",
+      "weight_applied": 0.8,
+      "evidence": "Speeches entirely focused on digital euro and payments infrastructure. No monetary policy rate signal."
+    },
+    {
+      "factor": "Frank Elderson (Executive Board)",
+      "direction": "off-mandate",
+      "weight_applied": 0.8,
+      "evidence": "Speech focused on nature-related financial risks and NGFS cooperation. No rate signal."
+    },
+    {
+      "factor": "Energy shock uncertainty",
+      "direction": "hawkish risk",
+      "weight_applied": 0.5,
+      "evidence": "Lagarde explicitly cited Iran war energy shock as a scenario that could delay cuts. Adds upside risk to the hold scenario."
+    }
+  ]
+}

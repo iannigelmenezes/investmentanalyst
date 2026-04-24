@@ -12,10 +12,13 @@ Output (3 charts + key reads + table):
 
 import sys
 import os
+import urllib3
 import pandas as pd
 import plotly.graph_objects as go
 import webbrowser
 from datetime import date, timedelta
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
@@ -52,7 +55,7 @@ def _fetch_country_curve(geo: str, tenors: list, as_of: str) -> dict:
         try:
             r = requests.get(url, params={
                 "format": "jsondata", "startPeriod": window_start, "endPeriod": as_of
-            }, timeout=60)
+            }, timeout=60, verify=False)
             if r.status_code != 200:
                 results[tenor] = None
                 continue

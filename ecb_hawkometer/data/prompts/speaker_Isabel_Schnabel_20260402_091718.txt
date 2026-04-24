@@ -1,0 +1,31 @@
+TASK: ECB_SPEAKER_ANALYSIS
+SPEAKER: Isabel Schnabel
+SPEECH_COUNT: 4
+
+SPEECHES:
+[Date: 2026-03-27 | Title: Monetary policy in times of geopolitical fragmentation]
+
+---
+[Date: 2026-03-06 | Title: Navigating inflation and employment in an era of supply shocks and AI]
+
+---
+[Date: 2026-02-18 | Title: Fiscal challenges amid geopolitical uncertainty and ageing societies]
+
+---
+[Date: 2026-02-11 | Title: Made in Europe]
+
+---
+
+INSTRUCTIONS:
+Analyse the hawkishness of this ECB speaker based on their recent speeches.
+Return ONLY valid JSON matching this exact schema:
+{
+  "speaker": "<name>",
+  "hawkishness_score": <float 1.0-10.0>,
+  "trend": "<increasing|decreasing|stable>",
+  "key_themes": ["<theme1>", "<theme2>", "<theme3>"],
+  "tone_summary": "<one paragraph plain English>",
+  "representative_quote": "<short verbatim quote>"
+}
+Hawkishness scale: 1=extremely dovish, 5=neutral, 10=extremely hawkish.
+Base trend on comparing most recent speech to earlier speeches.

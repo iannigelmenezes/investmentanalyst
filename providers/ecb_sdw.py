@@ -5,8 +5,11 @@ No API key required.
 """
 
 import requests
+import urllib3
 import pandas as pd
 from datetime import date, timedelta
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 BASE_URL = "https://data-api.ecb.europa.eu/service/data/"
 
@@ -51,7 +54,7 @@ def _fetch_series(flow_key: str, last_n: int = None,
 
     for attempt in range(1, 4):
         try:
-            r = requests.get(url, params=params, timeout=60)
+            r = requests.get(url, params=params, timeout=60, verify=False)
             r.raise_for_status()
             break
         except requests.HTTPError as e:

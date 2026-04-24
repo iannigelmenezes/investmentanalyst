@@ -1,0 +1,34 @@
+TASK: ECB_SPEAKER_ANALYSIS
+SPEAKER: Piero Cipollone
+SPEECH_COUNT: 5
+
+SPEECHES:
+[Date: 2026-04-01 | Title: The digital euro in a fragmenting world: ensuring Europe’s resilience and autonomy in payments]
+
+---
+[Date: 2026-03-24 | Title: The digital euro: preparing for a potential launch ]
+
+---
+[Date: 2026-03-23 | Title: Building the rails for Europe’s tokenised financial markets]
+
+---
+[Date: 2026-03-21 | Title: Digital euro - why?]
+
+---
+[Date: 2026-03-06 | Title: Digital euro]
+
+---
+
+INSTRUCTIONS:
+Analyse the hawkishness of this ECB speaker based on their recent speeches.
+Return ONLY valid JSON matching this exact schema:
+{
+  "speaker": "<name>",
+  "hawkishness_score": <float 1.0-10.0>,
+  "trend": "<increasing|decreasing|stable>",
+  "key_themes": ["<theme1>", "<theme2>", "<theme3>"],
+  "tone_summary": "<one paragraph plain English>",
+  "representative_quote": "<short verbatim quote>"
+}
+Hawkishness scale: 1=extremely dovish, 5=neutral, 10=extremely hawkish.
+Base trend on comparing most recent speech to earlier speeches.

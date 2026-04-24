@@ -1,0 +1,9 @@
+{
+  "speaker": "Piero Cipollone",
+  "hawkishness_score": 3.0,
+  "trend": "stable",
+  "key_themes": ["digital euro and payments sovereignty", "tokenisation and DLT infrastructure", "European financial autonomy"],
+  "tone_keywords": ["off-mandate", "digital euro only", "no rate signal", "sovereignty framing", "payments infrastructure"],
+  "tone_summary": "Cipollone's entire speech record in the 8-week window — 5 speeches, of which 3 are readable (Apr 1, Mar 24, Mar 23) and 2 are PDF-only (Mar 21, Mar 6) — is exclusively focused on the digital euro and European payments infrastructure. His April 1 Riga lecture makes the geopolitical sovereignty case for the digital euro most forcefully, drawing a direct parallel to the Baltic energy dependence lesson. His March 24 European Parliament statement covers digital euro technical preparations (inclusion design, DLT settlement via 'Pontes', 'Appia' roadmap). His March 23 House of the Euro speech addresses tokenised financial markets infrastructure. There is no monetary policy rate content across any readable speech. The low score (3.0) is a neutral placeholder reflecting the complete absence of rate or inflation signalling — Cipollone is effectively operating off-mandate from a hawkishness-scoring perspective in this entire period.",
+  "representative_quote": "Sovereignty is only as strong as the infrastructure it rests on. And that infrastructure must be resilient — as the Baltics and Europe more broadly learnt the hard way in the energy domain."
+}

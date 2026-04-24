@@ -1,0 +1,22 @@
+TASK: ECB_SPEAKER_ANALYSIS
+SPEAKER: Frank Elderson
+SPEECH_COUNT: 1
+
+SPEECHES:
+[Date: 2026-03-09 | Title: Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks ]
+
+---
+
+INSTRUCTIONS:
+Analyse the hawkishness of this ECB speaker based on their recent speeches.
+Return ONLY valid JSON matching this exact schema:
+{
+  "speaker": "<name>",
+  "hawkishness_score": <float 1.0-10.0>,
+  "trend": "<increasing|decreasing|stable>",
+  "key_themes": ["<theme1>", "<theme2>", "<theme3>"],
+  "tone_summary": "<one paragraph plain English>",
+  "representative_quote": "<short verbatim quote>"
+}
+Hawkishness scale: 1=extremely dovish, 5=neutral, 10=extremely hawkish.
+Base trend on comparing most recent speech to earlier speeches.

@@ -1,0 +1,10 @@
+{
+  "speaker": "Christine Lagarde",
+  "hawkishness_score": 4.8,
+  "trend": "increasing",
+  "key_themes": ["energy shock scenarios", "strategic autonomy", "price stability vigilance"],
+  "tone_keywords": ["scenario-based", "cautious", "no pre-commitment", "vigilant", "uncertainty framing"],
+  "stance_signal": "neutral-hawkish tilt",
+  "tone_summary": "Lagarde's 8-week speech record is defined by the March 25 Watchers Conference keynote, which explicitly framed the ECB's response to the Iran war energy shock as scenario-contingent rather than pre-committed. She noted that what had been shaping up as a dovish revision — inflation at 1.9%, solid growth — was overtaken by the shock, and laid out three principles: assess the nature and persistence of the shock before acting, focus on risks not just the baseline, and use a graduated response toolkit. Her other speeches centre on European strategic autonomy (rule of law, geopolitical fragmentation, the Volcker legacy of central bank credibility). The energy shock framing introduces a modest hawkish tilt relative to her prior stance: she is neither pre-committing to a cut pause nor ruling it out, but the rhetoric leans toward vigilance. The increasing trend reflects the shift from her February speeches (which had a cleaner dovish read on inflation normalisation) to the March uncertainty framing.",
+  "representative_quote": "Monetary policy cannot bring down energy prices. But we must identify when higher energy costs risk spilling over into broad-based inflation — be it through indirect effects or through second-round effects via wages and inflation expectations."
+}

@@ -1,0 +1,9 @@
+{
+  "speaker": "Unknown",
+  "hawkishness_score": 4.0,
+  "trend": "stable",
+  "key_themes": ["euro area outlook", "monetary policy assessment"],
+  "tone_keywords": ["PDF only", "no readable content", "neutral placeholder"],
+  "tone_summary": "One speech with no recorded speaker name ('The outlook for the euro area economy', March 25) was available only as a PDF. Insufficient readable content to score meaningfully. Score set to neutral (4.0) as a placeholder. This speech may be an ECB staff presentation or a Governing Council member without attribution in the foedb metadata.",
+  "representative_quote": "N/A — speech text not available in readable format."
+}

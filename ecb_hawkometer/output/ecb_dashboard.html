@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECB Policy Monitor</title>
+  <style>
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 16px;
+}
+a { color: #58a6ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1 { font-family: 'Courier New', Consolas, monospace; font-size: 1.4em; color: #58a6ff; }
+h2 { font-size: 1.05em; color: #e6edf3; margin-bottom: 10px;
+     border-bottom: 1px solid #30363d; padding-bottom: 6px; }
+h3 { font-size: 0.95em; color: #8b949e; margin-bottom: 6px; }
+header { margin-bottom: 20px; }
+.meta { font-family: 'Courier New', Consolas, monospace; font-size: 0.78em;
+        color: #8b949e; margin-top: 4px; }
+.card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+.verdict-box {
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 12px 24px; border-radius: 8px; margin-bottom: 12px;
+}
+.verdict-text {
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 2.4em; font-weight: bold; letter-spacing: 0.1em;
+}
+.score-num {
+    font-family: 'Courier New', Consolas, monospace;
+    font-weight: bold;
+}
+table {
+    width: 100%; border-collapse: collapse;
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 0.82em;
+}
+th {
+    background: #21262d; color: #8b949e; font-weight: 600;
+    padding: 8px 10px; text-align: left; border-bottom: 2px solid #30363d;
+    cursor: pointer; user-select: none; white-space: nowrap;
+}
+th:hover { color: #58a6ff; }
+th.sort-asc::after  { content: " ↑"; color: #58a6ff; }
+th.sort-desc::after { content: " ↓"; color: #58a6ff; }
+td {
+    padding: 7px 10px; border-bottom: 1px solid #21262d;
+    vertical-align: middle;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #1c2333; }
+details { margin-bottom: 8px; }
+summary {
+    cursor: pointer; padding: 10px 12px;
+    background: #21262d; border: 1px solid #30363d;
+    border-radius: 6px; font-weight: 600; color: #e6edf3;
+    list-style: none; display: flex; align-items: center; gap: 8px;
+}
+summary:hover { background: #2d333b; }
+details[open] summary { border-radius: 6px 6px 0 0; border-bottom-color: #161b22; }
+.detail-body {
+    background: #161b22; border: 1px solid #30363d; border-top: none;
+    border-radius: 0 0 6px 6px; padding: 14px 16px;
+}
+blockquote {
+    border-left: 3px solid #58a6ff; padding: 8px 14px;
+    background: #0d1117; border-radius: 0 6px 6px 0;
+    margin: 10px 0; font-style: italic; color: #8b949e;
+}
+.rubric-table th { background: #161b22; }
+
+  </style>
+</head>
+<body>
+  <header class="card"><h1>ECB Policy Monitor</h1><div class="meta">Generated: 2026-04-02 10:48 | Speeches analysed (12-week window): 30</div></header>
+  
+    <section class="card">
+      <h2>Speeches This Week</h2>
+      
+        <div style="border:1px solid #30363d;border-radius:6px;padding:12px 14px;
+                    margin-bottom:10px;background:#0d1117;opacity:1.0;">
+
+          <!-- Header row: speaker / date / badge / scores -->
+          <div style="display:flex;justify-content:space-between;align-items:center;
+                      flex-wrap:wrap;gap:6px;margin-bottom:6px;">
+            <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap;">
+              <span style="font-weight:700;color:#e6edf3;">Isabel Schnabel</span>
+              <span style="color:#8b949e;font-size:0.78em;">w=0.8</span>
+              <span style="color:#8b949e;font-size:0.78em;margin-left:4px;">2026-03-27</span>
+              <span style="background:#1c2b20;color:#3fb950;padding:1px 7px;border-radius:3px;font-size:0.7em;font-weight:600;margin-left:6px;">monetary policy</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <span style="background:#6e2020;color:#f85149;padding:3px 10px;border-radius:4px;font-size:0.78em;font-weight:bold;letter-spacing:0.06em;white-space:nowrap;">More hawkish</span>
+              <span style="font-size:0.78em;color:#8b949e;">
+                <span class="score-num" style="color:#f85149;">6.5</span>
+                <div style="display:inline-block;vertical-align:middle;width:80px;height:10px;background:#21262d;border-radius:4px;overflow:hidden;margin-left:6px;"><div style="width:65.0%;height:100%;background:#f85149;"></div></div>
+                <span style="color:#555;">vs</span>
+                <span class="score-num" style="color:#f85149;">6.3</span>
+                <span style="color:#555;font-size:0.85em;">12w</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Title link + policy relevance -->
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
+            <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260327~eca8717025.en.pdf" target="_blank" style="color:#8b949e;font-size:0.8em;">Monetary policy in times of geopolitical fragmentation</a>
+            <span style="margin-left:auto;white-space:nowrap;"><span title="Policy relevance 9/10"><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span></span></span>
+          </div>
+
+          <!-- Topic keywords -->
+          <div style="margin-bottom:4px;">
+            <span style="font-size:0.7em;color:#555;text-transform:uppercase;
+                         letter-spacing:0.06em;margin-right:6px;">topic</span>
+            <span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">monetary policy</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">geopolitical fragmentation</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">supply shocks</span>
+          </div>
+
+          <!-- Content keywords -->
+          <div style="margin-bottom:10px;">
+            <span style="font-size:0.7em;color:#555;text-transform:uppercase;
+                         letter-spacing:0.06em;margin-right:6px;">content</span>
+            <span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">price stability</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">central bank credibility</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">fragmentation risk</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">inflation persistence</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">supply-side shocks</span>
+          </div>
+
+          <!-- Tone comparison (semantic) -->
+          <div style="border-top:1px solid #21262d;padding-top:8px;
+                      font-size:0.8em;color:#8b949e;line-height:1.55;">
+            <span style="font-size:0.7em;text-transform:uppercase;letter-spacing:0.06em;
+                         color:#555;margin-right:6px;">tone vs prior</span>
+            Consistent with her established hawkish-vigilant stance. Schnabel continues to frame geopolitical fragmentation as an argument for — not against — a firm price-stability commitment. Semantic match with her Mar 6 speech: same supply-shock / credibility framing, stronger geopolitical context.
+          </div>
+
+        </div>
+        <div style="border:1px solid #30363d;border-radius:6px;padding:12px 14px;
+                    margin-bottom:10px;background:#0d1117;opacity:0.72;">
+
+          <!-- Header row: speaker / date / badge / scores -->
+          <div style="display:flex;justify-content:space-between;align-items:center;
+                      flex-wrap:wrap;gap:6px;margin-bottom:6px;">
+            <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap;">
+              <span style="font-weight:700;color:#e6edf3;">Luis de Guindos</span>
+              <span style="color:#8b949e;font-size:0.78em;">w=0.8</span>
+              <span style="color:#8b949e;font-size:0.78em;margin-left:4px;">2026-03-26</span>
+              <span style="background:#21262d;color:#8b949e;padding:1px 7px;border-radius:3px;font-size:0.7em;margin-left:6px;">off-mandate</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <span style="background:#1a3d2b;color:#3fb950;padding:3px 10px;border-radius:4px;font-size:0.78em;font-weight:bold;letter-spacing:0.06em;white-space:nowrap;">Slightly more dovish</span>
+              <span style="font-size:0.78em;color:#8b949e;">
+                <span class="score-num" style="color:#8b949e;">4.3</span>
+                <div style="display:inline-block;vertical-align:middle;width:80px;height:10px;background:#21262d;border-radius:4px;overflow:hidden;margin-left:6px;"><div style="width:43.0%;height:100%;background:#8b949e;"></div></div>
+                <span style="color:#555;">vs</span>
+                <span class="score-num" style="color:#8b949e;">4.4</span>
+                <span style="color:#555;font-size:0.85em;">12w</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Title link + policy relevance -->
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
+            <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260326~cbb4721baf.en.html" target="_blank" style="color:#8b949e;font-size:0.8em;">Navigating turbulence: challenges for Europe and the path ahead</a>
+            <span style="margin-left:auto;white-space:nowrap;"><span title="Policy relevance 5/10"><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span></span></span>
+          </div>
+
+          <!-- Topic keywords -->
+          <div style="margin-bottom:4px;">
+            <span style="font-size:0.7em;color:#555;text-transform:uppercase;
+                         letter-spacing:0.06em;margin-right:6px;">topic</span>
+            <span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">macro outlook</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">geopolitical uncertainty</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">European resilience</span>
+          </div>
+
+          <!-- Content keywords -->
+          <div style="margin-bottom:10px;">
+            <span style="font-size:0.7em;color:#555;text-transform:uppercase;
+                         letter-spacing:0.06em;margin-right:6px;">content</span>
+            <span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">data-dependent policy</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">trade fragmentation</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">defence spending</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">financial stability</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">growth resilience</span>
+          </div>
+
+          <!-- Tone comparison (semantic) -->
+          <div style="border-top:1px solid #21262d;padding-top:8px;
+                      font-size:0.8em;color:#8b949e;line-height:1.55;">
+            <span style="font-size:0.7em;text-transform:uppercase;letter-spacing:0.06em;
+                         color:#555;margin-right:6px;">tone vs prior</span>
+            Semantically consistent with his Jan 14 financial stability speech: same data-dependent framing, same emphasis on resilience-under-uncertainty. Slightly softer here — more emphasis on benign inflation baseline and adaptive policy than on tail risks. No new hawkish signal.
+          </div>
+
+        </div>
+        <div style="border:1px solid #30363d;border-radius:6px;padding:12px 14px;
+                    margin-bottom:10px;background:#0d1117;opacity:0.72;">
+
+          <!-- Header row: speaker / date / badge / scores -->
+          <div style="display:flex;justify-content:space-between;align-items:center;
+                      flex-wrap:wrap;gap:6px;margin-bottom:6px;">
+            <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap;">
+              <span style="font-weight:700;color:#e6edf3;">Piero Cipollone</span>
+              <span style="color:#8b949e;font-size:0.78em;">w=0.8</span>
+              <span style="color:#8b949e;font-size:0.78em;margin-left:4px;">2026-04-01</span>
+              <span style="background:#21262d;color:#8b949e;padding:1px 7px;border-radius:3px;font-size:0.7em;margin-left:6px;">off-mandate</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <span style="background:#21262d;color:#8b949e;padding:3px 10px;border-radius:4px;font-size:0.78em;font-weight:bold;letter-spacing:0.06em;white-space:nowrap;">Stable</span>
+              <span style="font-size:0.78em;color:#8b949e;">
+                <span class="score-num" style="color:#58a6ff;">3.0</span>
+                <div style="display:inline-block;vertical-align:middle;width:80px;height:10px;background:#21262d;border-radius:4px;overflow:hidden;margin-left:6px;"><div style="width:30.0%;height:100%;background:#58a6ff;"></div></div>
+                <span style="color:#555;">vs</span>
+                <span class="score-num" style="color:#58a6ff;">3.1</span>
+                <span style="color:#555;font-size:0.85em;">12w</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Title link + policy relevance -->
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
+            <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260401~d9106c31db.en.html" target="_blank" style="color:#8b949e;font-size:0.8em;">The digital euro in a fragmenting world: ensuring Europe’s resilience and autonomy in payments</a>
+            <span style="margin-left:auto;white-space:nowrap;"><span title="Policy relevance 2/10"><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#58a6ff;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span><span style="color:#21262d;font-size:0.7em;">&#9679;</span></span></span>
+          </div>
+
+          <!-- Topic keywords -->
+          <div style="margin-bottom:4px;">
+            <span style="font-size:0.7em;color:#555;text-transform:uppercase;
+                         letter-spacing:0.06em;margin-right:6px;">topic</span>
+            <span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">digital euro</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">payments sovereignty</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">European autonomy</span>
+          </div>
+
+          <!-- Content keywords -->
+          <div style="margin-bottom:10px;">
+            <span style="font-size:0.7em;color:#555;text-transform:uppercase;
+                         letter-spacing:0.06em;margin-right:6px;">content</span>
+            <span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">CBDC infrastructure</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">Visa / Mastercard dependence</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">geopolitical resilience</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">Pontes DLT</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">Appia roadmap</span>
+          </div>
+
+          <!-- Tone comparison (semantic) -->
+          <div style="border-top:1px solid #21262d;padding-top:8px;
+                      font-size:0.8em;color:#8b949e;line-height:1.55;">
+            <span style="font-size:0.7em;text-transform:uppercase;letter-spacing:0.06em;
+                         color:#555;margin-right:6px;">tone vs prior</span>
+            Fully consistent with his entire 8-week record. All Cipollone speeches cluster semantically around payments infrastructure and European sovereignty — no monetary policy rate content in any of them. Stronger geopolitical framing this week (Baltic energy analogy) but the underlying message is unchanged.
+          </div>
+
+        </div>
+    </section>
+  
+    <section class="card">
+      <h2>Speaker Hawkishness Board</h2>
+      <table id="speaker-table">
+        <thead><tr>
+          <th data-col="0">Speaker</th>
+          <th data-col="1" style="text-align:center;">Tier</th>
+          <th data-col="2">Score</th>
+          <th data-col="3" style="text-align:center;">Trend</th>
+          <th data-col="4">Themes / Tone</th>
+        </tr></thead>
+        <tbody><tr><td style="white-space:nowrap;"><span style="font-weight:600;">Christine Lagarde</span><span style="background:#3d2a0a;color:#e3b341;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">neutral-hawkish tilt</span></td><td style="color:#8b949e;text-align:center;">1</td><td style="white-space:nowrap;">  <span class="score-num" style="color:#8b949e;">4.8</span>  <div style="display:inline-block;vertical-align:middle;width:80px;height:10px;background:#21262d;border-radius:4px;overflow:hidden;margin-left:6px;"><div style="width:48.0%;height:100%;background:#8b949e;"></div></div></td><td style="text-align:center;"><span style="color:#f85149" title="Increasing">&#8593;</span></td><td><div style="margin-bottom:3px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">energy shock scenarios</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">strategic autonomy</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">price stability vigilance</span></div><div><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">scenario-based</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">cautious</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">no pre-commitment</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">vigilant</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">uncertainty framing</span></div></td></tr><tr><td style="white-space:nowrap;"><span style="font-weight:600;">Frank Elderson</span><span style="background:#1c2333;color:#8b949e;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">off-mandate</span></td><td style="color:#8b949e;text-align:center;">2</td><td style="white-space:nowrap;">  <span class="score-num" style="color:#58a6ff;">3.0</span>  <div style="display:inline-block;vertical-align:middle;width:80px;height:10px;background:#21262d;border-radius:4px;overflow:hidden;margin-left:6px;"><div style="width:30.0%;height:100%;background:#58a6ff;"></div></div></td><td style="text-align:center;"><span style="color:#8b949e" title="Stable">&#8594;</span></td><td><div style="margin-bottom:3px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">nature-related risk</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">NGFS cooperation</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">supervisory frameworks</span></div><div><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">off-mandate</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">supervisory</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">climate risk</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">no rate signal</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">cooperative</span></div></td></tr><tr><td style="white-space:nowrap;"><span style="font-weight:600;">Isabel Schnabel</span><span style="background:#6e2020;color:#f85149;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">hawkish</span></td><td style="color:#8b949e;text-align:center;">2</td><td style="white-space:nowrap;">  <span class="score-num" style="color:#f85149;">6.3</span>  <div style="display:inline-block;vertical-align:middle;width:80px;height:10px;background:#21262d;border-radius:4px;overflow:hidden;margin-left:6px;"><div style="width:63.0%;height:100%;background:#f85149;"></div></div></td><td style="text-align:center;"><span style="color:#8b949e" title="Stable">&#8594;</span></td><td><div style="margin-bottom:3px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">price stability primacy</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">supply-side shocks</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">Single Market scale</span></div><div><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">hawkish</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">credibility-first</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">anti-dual mandate</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">supply-shock vigilance</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">politically resilient</span></div></td></tr><tr><td style="white-space:nowrap;"><span style="font-weight:600;">Luis de Guindos</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">neutral</span></td><td style="color:#8b949e;text-align:center;">2</td><td style="white-space:nowrap;">  <span class="score-num" style="color:#8b949e;">4.4</span>  <div style="display:inline-block;vertical-align:middle;width:80px;height:10px;background:#21262d;border-radius:4px;overflow:hidden;margin-left:6px;"><div style="width:44.0%;height:100%;background:#8b949e;"></div></div></td><td style="text-align:center;"><span style="color:#8b949e" title="Stable">&#8594;</span></td><td><div style="margin-bottom:3px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">geopolitical uncertainty and resilience</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">financial stability</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">ECB data-dependent approach</span></div><div><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">data-dependent</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">resilience framing</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">benign inflation baseline</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">no rate direction</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">tail risk awareness</span></div></td></tr><tr><td style="white-space:nowrap;"><span style="font-weight:600;">Philip R. Lane</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">neutral</span></td><td style="color:#8b949e;text-align:center;">4</td><td style="white-space:nowrap;">  <span class="score-num" style="color:#8b949e;">4.2</span>  <div style="display:inline-block;vertical-align:middle;width:80px;height:10px;background:#21262d;border-radius:4px;overflow:hidden;margin-left:6px;"><div style="width:42.0%;height:100%;background:#8b949e;"></div></div></td><td style="text-align:center;"><span style="color:#8b949e" title="Stable">&#8594;</span></td><td><div style="margin-bottom:3px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">AI and productivity</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">euro area convergence</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">policy transmission</span></div><div><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">analytical</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">balanced</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">no rate signal</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">structural focus</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">mild dovish lean</span></div></td></tr><tr><td style="white-space:nowrap;"><span style="font-weight:600;">Piero Cipollone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">neutral</span></td><td style="color:#8b949e;text-align:center;">2</td><td style="white-space:nowrap;">  <span class="score-num" style="color:#58a6ff;">3.0</span>  <div style="display:inline-block;vertical-align:middle;width:80px;height:10px;background:#21262d;border-radius:4px;overflow:hidden;margin-left:6px;"><div style="width:30.0%;height:100%;background:#58a6ff;"></div></div></td><td style="text-align:center;"><span style="color:#8b949e" title="Stable">&#8594;</span></td><td><div style="margin-bottom:3px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">digital euro and payments sovereignty</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">tokenisation and DLT infrastructure</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">European financial autonomy</span></div><div><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">off-mandate</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">digital euro only</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">no rate signal</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">sovereignty framing</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">payments infrastructure</span></div></td></tr><tr><td style="white-space:nowrap;"><span style="font-weight:600;">Unknown</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">neutral</span></td><td style="color:#8b949e;text-align:center;">4</td><td style="white-space:nowrap;">  <span class="score-num" style="color:#8b949e;">4.0</span>  <div style="display:inline-block;vertical-align:middle;width:80px;height:10px;background:#21262d;border-radius:4px;overflow:hidden;margin-left:6px;"><div style="width:40.0%;height:100%;background:#8b949e;"></div></div></td><td style="text-align:center;"><span style="color:#8b949e" title="Stable">&#8594;</span></td><td><div style="margin-bottom:3px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">euro area outlook</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">monetary policy assessment</span></div><div><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">PDF only</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">no readable content</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">neutral placeholder</span></div></td></tr></tbody>
+      </table>
+    </section>
+  
+    <section class="card">
+      <h2>Per-Speaker Deep Dive</h2>
+      
+        <details>
+          <summary>
+            <span style="font-family:'Courier New',Consolas,monospace;
+                         color:#8b949e;">4.8</span>
+            &nbsp;Christine Lagarde
+          </summary>
+          <div class="detail-body">
+            <div style="margin-bottom:6px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">energy shock scenarios</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">strategic autonomy</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">price stability vigilance</span></div><div style="margin-bottom:8px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">scenario-based</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">cautious</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">no pre-commitment</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">vigilant</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">uncertainty framing</span></div><div style="margin-bottom:10px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">stance</span><span style="background:#3d2a0a;color:#e3b341;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">neutral-hawkish tilt</span></div>
+            <h3 style="margin-top:12px;">Recent Speeches</h3><ul style="list-style:none;padding:0;margin-top:6px;"><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-03-25</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260325~ac2916a211.en.html" target="_blank">Navigating energy shocks: risks and policy responses</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-03-05</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260305~b091c4a651.en.html" target="_blank">Technology, fragmentation and the new uncertainty</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-02-26</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260226~87d6c12449.en.html" target="_blank">Hearing of the Committee on Economic and Monetary Affairs of the European Parliament</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-02-23</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260223~4c2aa74452.en.html" target="_blank">Turning size into scale: Europe’s new growth model</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-02-20</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260220~58ceaf28ff.en.html" target="_blank">The order that took centuries to build</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-02-14</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260214~8944ba0fee.en.html" target="_blank">Preparing for geoeconomic fragmentation</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-02-09</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260209_1~f0653b48af.en.html" target="_blank">European Parliament plenary debate on the ECB Annual Report</a></li></ul>
+            <div style="margin-top:10px;"><h3>Hawkishness over time</h3><svg width="200" height="40" viewBox="0 0 200 40" style="display:block;margin:6px 0;"><polyline points="4.0,36.0 36.0,36.0 68.0,36.0 100.0,36.0 132.0,36.0 164.0,36.0 196.0,36.0" fill="none" stroke="#58a6ff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span style="font-family:'Courier New',Consolas,monospace;
+                         color:#58a6ff;">3.0</span>
+            &nbsp;Frank Elderson
+          </summary>
+          <div class="detail-body">
+            <div style="margin-bottom:6px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">nature-related risk</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">NGFS cooperation</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">supervisory frameworks</span></div><div style="margin-bottom:8px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">off-mandate</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">supervisory</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">climate risk</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">no rate signal</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">cooperative</span></div><div style="margin-bottom:10px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">stance</span><span style="background:#1c2333;color:#8b949e;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">off-mandate</span></div>
+            <h3 style="margin-top:12px;">Recent Speeches</h3><ul style="list-style:none;padding:0;margin-top:6px;"><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-03-09</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260309~6cfdbd02b7.en.html" target="_blank">Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks </a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-01-28</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260128~c294dcefde.en.html" target="_blank">Hearing of the Committee on Economic and Monetary Affairs of the European Parliament</a></li></ul>
+            
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span style="font-family:'Courier New',Consolas,monospace;
+                         color:#f85149;">6.3</span>
+            &nbsp;Isabel Schnabel
+          </summary>
+          <div class="detail-body">
+            <div style="margin-bottom:6px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">price stability primacy</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">supply-side shocks</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">Single Market scale</span></div><div style="margin-bottom:8px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">hawkish</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">credibility-first</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">anti-dual mandate</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">supply-shock vigilance</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">politically resilient</span></div><div style="margin-bottom:10px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">stance</span><span style="background:#6e2020;color:#f85149;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">hawkish</span></div>
+            <h3 style="margin-top:12px;">Recent Speeches</h3><ul style="list-style:none;padding:0;margin-top:6px;"><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-03-27</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260327~eca8717025.en.pdf" target="_blank">Monetary policy in times of geopolitical fragmentation</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-03-06</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260306_1~a4943607d7.en.html" target="_blank">Navigating inflation and employment in an era of supply shocks and AI</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-02-18</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260218_1~1e1ee9b9d2.en.pdf" target="_blank">Fiscal challenges amid geopolitical uncertainty and ageing societies</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-02-11</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260211~2822ae9612.en.html" target="_blank">Made in Europe</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-01-28</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260128_1~b2b465e290.en.pdf" target="_blank">How to foster growth in Europe</a></li></ul>
+            <div style="margin-top:10px;"><h3>Hawkishness over time</h3><svg width="200" height="40" viewBox="0 0 200 40" style="display:block;margin:6px 0;"><polyline points="4.0,36.0 52.0,36.0 100.0,36.0 148.0,36.0 196.0,36.0" fill="none" stroke="#58a6ff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span style="font-family:'Courier New',Consolas,monospace;
+                         color:#8b949e;">4.4</span>
+            &nbsp;Luis de Guindos
+          </summary>
+          <div class="detail-body">
+            <div style="margin-bottom:6px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">geopolitical uncertainty and resilience</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">financial stability</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">ECB data-dependent approach</span></div><div style="margin-bottom:8px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">data-dependent</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">resilience framing</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">benign inflation baseline</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">no rate direction</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">tail risk awareness</span></div><div style="margin-bottom:10px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">stance</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">neutral</span></div>
+            <h3 style="margin-top:12px;">Recent Speeches</h3><ul style="list-style:none;padding:0;margin-top:6px;"><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-03-26</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260326~cbb4721baf.en.html" target="_blank">Navigating turbulence: challenges for Europe and the path ahead</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-01-14</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260114~21e6c577a8.en.html" target="_blank">Monetary policy and financial stability in the euro area</a></li></ul>
+            
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span style="font-family:'Courier New',Consolas,monospace;
+                         color:#8b949e;">4.2</span>
+            &nbsp;Philip R. Lane
+          </summary>
+          <div class="detail-body">
+            <div style="margin-bottom:6px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">AI and productivity</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">euro area convergence</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">policy transmission</span></div><div style="margin-bottom:8px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">analytical</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">balanced</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">no rate signal</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">structural focus</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">mild dovish lean</span></div><div style="margin-bottom:10px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">stance</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">neutral</span></div>
+            <h3 style="margin-top:12px;">Recent Speeches</h3><ul style="list-style:none;padding:0;margin-top:6px;"><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-03-23</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260323_1~1e06784a89.en.html" target="_blank">AI and the euro area economy</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-02-12</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260212_1~3173f892b1.en.html" target="_blank">Bulgaria and the euro</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-02-09</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260209~d8c520c2ff.en.pdf" target="_blank">The February 2026 ECB monetary policy decision</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-01-09</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260109~7a044d36db.en.html" target="_blank">The euro in a changing world </a></li></ul>
+            <div style="margin-top:10px;"><h3>Hawkishness over time</h3><svg width="200" height="40" viewBox="0 0 200 40" style="display:block;margin:6px 0;"><polyline points="4.0,36.0 68.0,36.0 132.0,36.0 196.0,36.0" fill="none" stroke="#58a6ff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span style="font-family:'Courier New',Consolas,monospace;
+                         color:#58a6ff;">3.0</span>
+            &nbsp;Piero Cipollone
+          </summary>
+          <div class="detail-body">
+            <div style="margin-bottom:6px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">digital euro and payments sovereignty</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">tokenisation and DLT infrastructure</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">European financial autonomy</span></div><div style="margin-bottom:8px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">off-mandate</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">digital euro only</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">no rate signal</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">sovereignty framing</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">payments infrastructure</span></div><div style="margin-bottom:10px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">stance</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">neutral</span></div>
+            <h3 style="margin-top:12px;">Recent Speeches</h3><ul style="list-style:none;padding:0;margin-top:6px;"><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-04-01</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260401~d9106c31db.en.html" target="_blank">The digital euro in a fragmenting world: ensuring Europe’s resilience and autonomy in payments</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-03-24</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260324~66f71f7577.en.html" target="_blank">The digital euro: preparing for a potential launch </a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-03-23</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260323~a88f20c049.en.html" target="_blank">Building the rails for Europe’s tokenised financial markets</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-03-21</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260321~bf2186fc07.en.pdf" target="_blank">Digital euro - why?</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-03-06</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260306~d0237cda20.en.pdf" target="_blank">Digital euro</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-02-19</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260219~e9f59ca8c0.en.html" target="_blank">The digital euro: enhancing payments in the euro area</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-02-18</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260218~e8cad0ec0f.en.pdf" target="_blank">Digital euro</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-02-12</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260212~9fabe9baaa.en.html" target="_blank">Europe and monetary sovereignty</a></li><li style="margin:4px 0;"><span style="color:#8b949e;font-size:0.8em;">2026-02-06</span> <a href="https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260206~dd5354fe95.en.html" target="_blank">The digital euro: strengthening Europe’s payments ecosystem</a></li></ul>
+            <div style="margin-top:10px;"><h3>Hawkishness over time</h3><svg width="200" height="40" viewBox="0 0 200 40" style="display:block;margin:6px 0;"><polyline points="4.0,36.0 28.0,36.0 52.0,36.0 76.0,36.0 100.0,36.0 124.0,36.0 148.0,36.0 172.0,36.0 196.0,36.0" fill="none" stroke="#58a6ff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span style="font-family:'Courier New',Consolas,monospace;
+                         color:#8b949e;">4.0</span>
+            &nbsp;Unknown
+          </summary>
+          <div class="detail-body">
+            <div style="margin-bottom:6px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">themes</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">euro area outlook</span><span style="background:#21262d;color:#c9d1d9;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #444c56;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">monetary policy assessment</span></div><div style="margin-bottom:8px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">tone</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">PDF only</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">no readable content</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:10px;font-size:0.74em;margin:2px 2px 2px 0;display:inline-block;border:1px solid #30363d;font-family:'Courier New',Consolas,monospace;white-space:nowrap;">neutral placeholder</span></div><div style="margin-bottom:10px;"><span style="font-size:0.68em;color:#555;text-transform:uppercase;letter-spacing:0.05em;margin-right:4px;">stance</span><span style="background:#21262d;color:#8b949e;padding:2px 8px;border-radius:4px;font-size:0.72em;font-weight:600;letter-spacing:0.05em;white-space:nowrap;margin-left:6px;">neutral</span></div>
+            
+            
+          </div>
+        </details>
+    </section>
+  <script>
+
+(function() {
+    function sortTable(table, colIdx, asc) {
+        var tbody = table.querySelector('tbody');
+        var rows = Array.from(tbody.querySelectorAll('tr'));
+        rows.sort(function(a, b) {
+            var ta = a.cells[colIdx] ? a.cells[colIdx].innerText.trim() : '';
+            var tb = b.cells[colIdx] ? b.cells[colIdx].innerText.trim() : '';
+            var na = parseFloat(ta), nb = parseFloat(tb);
+            if (!isNaN(na) && !isNaN(nb)) return asc ? na - nb : nb - na;
+            return asc ? ta.localeCompare(tb) : tb.localeCompare(ta);
+        });
+        rows.forEach(function(r) { tbody.appendChild(r); });
+    }
+
+    document.querySelectorAll('th[data-col]').forEach(function(th) {
+        th.addEventListener('click', function() {
+            var table = th.closest('table');
+            var col   = parseInt(th.dataset.col);
+            var asc   = th.classList.contains('sort-desc');
+            table.querySelectorAll('th').forEach(function(h) {
+                h.classList.remove('sort-asc', 'sort-desc');
+            });
+            th.classList.add(asc ? 'sort-asc' : 'sort-desc');
+            sortTable(table, col, asc);
+        });
+    });
+})();
+
+  </script>
+</body>
+</html>

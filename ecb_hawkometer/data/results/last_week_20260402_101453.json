@@ -1,0 +1,50 @@
+[
+  {
+    "speaker": "Isabel Schnabel",
+    "date": "2026-03-27",
+    "title": "Monetary policy in times of geopolitical fragmentation",
+    "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260327~eca8717025.en.pdf",
+    "topic_keywords": ["monetary policy", "geopolitical fragmentation", "supply shocks"],
+    "content_keywords": ["price stability", "central bank credibility", "fragmentation risk", "inflation persistence", "supply-side shocks"],
+    "is_monetary_policy": true,
+    "policy_relevance_score": 9,
+    "hawkishness_score": 6.5,
+    "prior_12w_score": 6.3,
+    "shift": "slightly_more_hawkish",
+    "shift_label": "More hawkish",
+    "tone_comparison": "Consistent with her established hawkish-vigilant stance. Schnabel continues to frame geopolitical fragmentation as an argument for \u2014 not against \u2014 a firm price-stability commitment. Semantic match with her Mar 6 speech: same supply-shock / credibility framing, stronger geopolitical context.",
+    "representative_quote": "N/A \u2014 speech text not available in readable format."
+  },
+  {
+    "speaker": "Luis de Guindos",
+    "date": "2026-03-26",
+    "title": "Navigating turbulence: challenges for Europe and the path ahead",
+    "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260326~cbb4721baf.en.html",
+    "topic_keywords": ["macro outlook", "geopolitical uncertainty", "European resilience"],
+    "content_keywords": ["data-dependent policy", "trade fragmentation", "defence spending", "financial stability", "growth resilience"],
+    "is_monetary_policy": false,
+    "policy_relevance_score": 5,
+    "hawkishness_score": 4.3,
+    "prior_12w_score": 4.4,
+    "shift": "slightly_more_dovish",
+    "shift_label": "Slightly more dovish",
+    "tone_comparison": "Semantically consistent with his Jan 14 financial stability speech: same data-dependent framing, same emphasis on resilience-under-uncertainty. Slightly softer here \u2014 more emphasis on benign inflation baseline and adaptive policy than on tail risks. No new hawkish signal.",
+    "representative_quote": "A new paradigm has emerged, where the rule of law is challenged by the rule of power. High uncertainty and geoeconomic fragmentation complicate the assessment of the economic outlook."
+  },
+  {
+    "speaker": "Piero Cipollone",
+    "date": "2026-04-01",
+    "title": "The digital euro in a fragmenting world: ensuring Europe\u2019s resilience and autonomy in payments",
+    "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260401~d9106c31db.en.html",
+    "topic_keywords": ["digital euro", "payments sovereignty", "European autonomy"],
+    "content_keywords": ["CBDC infrastructure", "Visa / Mastercard dependence", "geopolitical resilience", "Pontes DLT", "Appia roadmap"],
+    "is_monetary_policy": false,
+    "policy_relevance_score": 2,
+    "hawkishness_score": 3.0,
+    "prior_12w_score": 3.1,
+    "shift": "stable",
+    "shift_label": "Stable",
+    "tone_comparison": "Fully consistent with his entire 8-week record. All Cipollone speeches cluster semantically around payments infrastructure and European sovereignty \u2014 no monetary policy rate content in any of them. Stronger geopolitical framing this week (Baltic energy analogy) but the underlying message is unchanged.",
+    "representative_quote": "Sovereignty is only as strong as the infrastructure it rests on. And that infrastructure must be resilient \u2014 as the Baltics and Europe more broadly learnt the hard way in the energy domain."
+  }
+]

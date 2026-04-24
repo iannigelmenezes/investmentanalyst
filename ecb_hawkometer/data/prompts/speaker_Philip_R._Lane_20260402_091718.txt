@@ -1,0 +1,28 @@
+TASK: ECB_SPEAKER_ANALYSIS
+SPEAKER: Philip R. Lane
+SPEECH_COUNT: 3
+
+SPEECHES:
+[Date: 2026-03-23 | Title: AI and the euro area economy]
+
+---
+[Date: 2026-02-12 | Title: Bulgaria and the euro]
+
+---
+[Date: 2026-02-09 | Title: The February 2026 ECB monetary policy decision]
+
+---
+
+INSTRUCTIONS:
+Analyse the hawkishness of this ECB speaker based on their recent speeches.
+Return ONLY valid JSON matching this exact schema:
+{
+  "speaker": "<name>",
+  "hawkishness_score": <float 1.0-10.0>,
+  "trend": "<increasing|decreasing|stable>",
+  "key_themes": ["<theme1>", "<theme2>", "<theme3>"],
+  "tone_summary": "<one paragraph plain English>",
+  "representative_quote": "<short verbatim quote>"
+}
+Hawkishness scale: 1=extremely dovish, 5=neutral, 10=extremely hawkish.
+Base trend on comparing most recent speech to earlier speeches.

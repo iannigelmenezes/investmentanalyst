@@ -65,3 +65,60 @@ imf:
   countries:
     japan: JPN
     usa: USA
+
+eia:
+  base_url: https://api.eia.gov/v2
+  # API key stored in .env as EIA_API_KEY
+  datasets:
+    international:
+      path: international/data
+      frequency: annual
+      unit: TBPD             # Thousand barrels per day
+      products:
+        petroleum_total: "57"  # Petroleum and other liquids
+      activities:
+        production:  "1"
+        consumption: "2"
+        imports:     "3"
+        exports:     "4"
+  # Key region codes for oil Sankey
+  producer_regions:
+    - USA    # United States
+    - SAU    # Saudi Arabia
+    - RUS    # Russia
+    - CAN    # Canada
+    - IRQ    # Iraq
+    - ARE    # UAE
+    - KWT    # Kuwait
+    - IRN    # Iran
+    - NGA    # Nigeria
+    - NOR    # Norway
+    - BRA    # Brazil
+    - CHN    # China
+    - MEX    # Mexico
+    - KAZ    # Kazakhstan
+    - LBY    # Libya
+    - VEN    # Venezuela
+    - DZA    # Algeria
+    - AGO    # Angola
+  consumer_regions:
+    - USA    # United States
+    - CHN    # China
+    - IND    # India
+    - SAU    # Saudi Arabia
+    - RUS    # Russia
+    - BRA    # Brazil
+    - KOR    # South Korea
+    - CAN    # Canada
+    - DEU    # Germany
+    - JPN    # Japan
+    - MEX    # Mexico
+    - GBR    # United Kingdom
+    - FRA    # France
+    - ITA    # Italy
+    - IDN    # Indonesia
+    - SGP    # Singapore
+    - THA    # Thailand
+    - MYS    # Malaysia
+    - ARE    # UAE
+    - EGY    # Egypt

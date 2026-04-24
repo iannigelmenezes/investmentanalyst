@@ -1,0 +1,41 @@
+[
+  {
+    "speaker": "Isabel Schnabel",
+    "date": "2026-03-27",
+    "title": "Monetary policy in times of geopolitical fragmentation",
+    "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260327~eca8717025.en.pdf",
+    "speech_summary": "Speech available as PDF only \u2014 full text could not be extracted. Based on the title and Schnabel\u2019s established pattern, this speech addresses the challenge of conducting monetary policy amid geopolitical fragmentation. Her prior March 6 speech explicitly warned against subordinating price stability to growth objectives, and this title suggests a continuation of that vigilant tone \u2014 examining how fragmentation complicates the inflation outlook and reinforces the case for a credible price-stability commitment.",
+    "hawkishness_score": 6.5,
+    "prior_12w_score": 6.2,
+    "shift": "slightly_more_hawkish",
+    "shift_label": "More hawkish",
+    "shift_rationale": "Title signals geopolitical fragmentation as a complicating factor for monetary policy \u2014 a framing Schnabel consistently uses to argue for vigilance rather than easing. Marginally more hawkish than her 12-week average of 6.2, though the PDF-only format limits certainty.",
+    "representative_quote": "N/A \u2014 speech text not available in readable format."
+  },
+  {
+    "speaker": "Luis de Guindos",
+    "date": "2026-03-26",
+    "title": "Navigating turbulence: challenges for Europe and the path ahead",
+    "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260326~cbb4721baf.en.html",
+    "speech_summary": "De Guindos delivered the Ragnar Nurkse Memorial Lecture in Tallinn, surveying the euro area\u2019s resilience through successive crises and the profound geopolitical uncertainty now facing Europe. He acknowledged strong 2025 growth (1.5%) and falling inflation, but flagged deep structural risks: US trade policy shifts, erosion of the multilateral order, European defence and energy spending pressures, and the possibility of trade fragmentation hitting export-heavy euro area countries. He described the ECB\u2019s \u2018data-dependent, meeting-by-meeting\u2019 approach as the appropriate response to uncertainty, without advocating for any specific rate direction. The speech is primarily a macro-stability assessment rather than a monetary policy signal.",
+    "hawkishness_score": 4.3,
+    "prior_12w_score": 4.5,
+    "shift": "slightly_more_dovish",
+    "shift_label": "Slightly more dovish",
+    "shift_rationale": "Marginally softer than his 12-week average of 4.5. He emphasised resilience and the ECB\u2019s adaptive stance without any hawkish push-back, and the benign growth/inflation backdrop he described implicitly supports continued normalisation. No inflationary alarm bells.",
+    "representative_quote": "A new paradigm has emerged, where the rule of law is challenged by the rule of power. High uncertainty and geoeconomic fragmentation complicate the assessment of the economic outlook."
+  },
+  {
+    "speaker": "Piero Cipollone",
+    "date": "2026-04-01",
+    "title": "The digital euro in a fragmenting world: ensuring Europe\u2019s resilience and autonomy in payments",
+    "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260401~d9106c31db.en.html",
+    "speech_summary": "Cipollone delivered a public lecture at the Stockholm School of Economics in Riga, making the strategic case for the digital euro as critical payments infrastructure for European sovereignty. Drawing a direct parallel to the Baltic energy dependence lesson, he argued that Europe\u2019s current over-reliance on non-European payment providers (Visa, Mastercard, non-European apps) represents a sovereignty vulnerability analogous to reliance on Russian gas. He framed the digital euro not as a CBDC curiosity but as a geopolitical necessity: a resilient, sovereign payment rail that cannot be switched off by external actors. No monetary policy rate content.",
+    "hawkishness_score": 3.0,
+    "prior_12w_score": 3.1,
+    "shift": "stable",
+    "shift_label": "Stable",
+    "shift_rationale": "Consistent with his 12-week average of 3.1. Cipollone remains entirely focused on digital euro and payments infrastructure. This speech adds a stronger geopolitical sovereignty framing to his digital euro advocacy, but contains zero monetary policy rate signal. Score is effectively a neutral placeholder given the off-mandate content.",
+    "representative_quote": "Sovereignty is only as strong as the infrastructure it rests on. And that infrastructure must be resilient \u2014 as the Baltics and Europe more broadly learnt the hard way in the energy domain."
+  }
+]
